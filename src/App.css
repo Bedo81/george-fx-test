@@ -36,3 +36,42 @@
     transform: rotate(360deg);
   }
 }
+
+
+@media screen and (max-width: 600px) {
+  table tr {
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+
+  table thead {
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    float: left;
+    content: attr(data-label);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
